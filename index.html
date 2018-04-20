@@ -6,8 +6,28 @@
 <body style = "text-align: center">
 
 <h1>This is a picture</h1>
-<img src="picture.png" height=200>
+<img id=picture src="picture.png" height=200>
+<br><br><br>
+<button type="submit" id="btn1" onclick="changeImage1('picture')">change image</button>
+<br><br><br>
+<script>
 
+function changeImage1(imgid)
+
+{
+
+
+
+	if(imgid=='picture')
+	{
+				
+	 document.getElementById(imgid).src="wenger.jpg";
+	
+	}
+	
+
+}
+</script>
 <footer>BG Team</footer>
 
 </body>
