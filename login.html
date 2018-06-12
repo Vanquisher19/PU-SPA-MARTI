@@ -5,17 +5,33 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<div class="main">
+	<div id="login_div" class="main">
 		<h1>Login</h1>
-		<input type="email" placeholder="Email"/>
-		<input type="password" placeholder="Password"/>
-		<button>Login</button>
+		<input type="email" placeholder="Email" id="email_field"/>
+		<input type="password" placeholder="Password" id="password_field"/>
+		<button onClick="login()">Login</button>
 	</div>
 	
-	<div class="loggedin-div">
+	<div id="user_div" class="loggedin-div">
 	<h2>Welcome, User</h2>
-	<p>You are currently logged in</p>
-	<button>Logout</button>
+	<p id="user_para">You are currently logged in</p>
+	<button onClick="logout()">Logout</button>
 	</div>
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAQI9ry3lLIfHPKpldNtgI9phDa9WLiOgQ",
+    authDomain: "fir-login-4d019.firebaseapp.com",
+    databaseURL: "https://fir-login-4d019.firebaseio.com",
+    projectId: "fir-login-4d019",
+    storageBucket: "",
+    messagingSenderId: "546787718297"
+  };
+  firebase.initializeApp(config);
+	</script>
+	<script src="index.js"></script>
 </body>
 </html>
